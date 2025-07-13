@@ -1,0 +1,27 @@
+---
+const { text } = Astro.props;
+const { link } = Astro.props;
+---
+
+<a href={ link }>
+    <span>
+        <slot /> 
+        { text }
+    </span>    
+</a>
+
+<style>
+    a{
+        text-decoration: none;
+        border: 2px black solid;
+        border-radius: 20px;
+        padding: 0.5rem;
+        background-color: #41b8d5;
+        color: rgb(14, 14, 126);
+    }
+
+    span{
+    display: inline-flex;
+    align-items: center;
+    }
+</style>
