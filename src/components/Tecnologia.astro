@@ -1,0 +1,21 @@
+---
+const { nombre } = Astro.props;
+---
+
+<div>
+    <slot />
+    { nombre }
+</div>
+
+<style>
+    div{
+        display: inline-flex;
+        align-items: center;
+        border: 2px black solid;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 0.5rem;
+        background-color: #41b8d5;
+        color: rgb(14, 14, 126);
+    }
+</style>

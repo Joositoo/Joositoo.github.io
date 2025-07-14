@@ -1,10 +1,25 @@
 ---
-import Presentacion from '../components/Presentacion.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Contacto from "../components/Contacto.astro";
+import Presentacion from "../components/Presentacion.astro";
+import Tecnologias from "../components/Tecnologias.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Portfolio - Joositoo">
 	<Presentacion />
+	<Tecnologias />
+	<Contacto>
+		<div class="line"></div>
+		<p>José Manuel Romero de Lucas</p>
+	</Contacto>
 </Layout>
 
+<style>
+	.line {
+		width: 90%;
+		height: 3px;
+		background-color: #41b8d5;
+		border-radius: 50px;
+		margin: 1em auto;
+	}
+</style>
