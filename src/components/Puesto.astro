@@ -1,0 +1,38 @@
+---
+const { puesto, empresa, descripcion, tiempo } = Astro.props;
+---
+
+<div class="grid-container">
+    <div>
+        <slot />
+    </div>
+    <div>
+        <h3>{ puesto }</h3>
+        <h4>{ empresa }</h4>
+        <p class="description">{ descripcion }</p>
+    </div>
+    <div>
+        <p class="time">{ tiempo }</p>
+    </div>
+</div>
+
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: 0.3fr 3fr auto;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .description{
+        color: #666;
+    }
+
+    .time{
+        color: #0e0e7e;
+        background-color: #41b8d5;
+        border: 2px solid #0e0e7e;
+        border-radius: 20px;
+        padding: 0.5em 1em;
+    }
+</style>
