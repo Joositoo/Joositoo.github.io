@@ -1,0 +1,35 @@
+---
+const { titulo, subtitulo, descripcion, ruta, alt } = Astro.props;
+---
+
+<div class="grid-container">
+    <div>
+        <slot name="icono" />
+    </div>
+    <div>
+        <h3>{ titulo }</h3>
+        <h4>{ subtitulo }</h4>
+        <p class="description">{ descripcion }</p>
+        <slot name="enlaces" />
+    </div>
+    <div>
+        <img src={ ruta } alt="Logo del proyecto">
+    </div>
+</div>
+
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: 0.3fr 3fr auto;
+
+        padding: 1rem 0;
+    }
+
+    .description{
+        color: #666;
+    }
+
+    h3{
+        margin-top: 0;
+    }
+</style>
