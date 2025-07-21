@@ -1,0 +1,59 @@
+---
+const { titulo, centro, duracion } = Astro.props;
+---
+
+<div class="grid-container">
+    <div>
+        <div class="icon">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-book"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path><path
+                    d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path><path
+                    d="M3 6l0 13"></path><path d="M12 6l0 13"></path><path
+                    d="M21 6l0 13"></path></svg
+            >
+        </div>
+    </div>
+
+<div>
+    <h3>{titulo}</h3>
+    <h4>{centro}</h4>
+</div>
+<div>
+    <p class="time">{duracion}</p>
+</div>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 0.3fr 3fr auto;
+
+        padding: 1rem 0;
+    }
+
+    .icon {
+        width: fit-content;
+        padding: 0.5em;
+        border-radius: 50px;
+        background-color: #41b8d5;
+        color: rgb(14, 14, 126);
+    }
+
+    .time {
+        color: #0e0e7e;
+        background-color: #41b8d5;
+        border: 2px solid #0e0e7e;
+        border-radius: 20px;
+        padding: 0.5em 1em;
+    }
+</style>
