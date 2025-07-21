@@ -5,10 +5,7 @@ import Contacto from "./Contacto.astro";
 
 <div class="grid">
     <span class="img">
-        <img
-        src=""
-            alt="Retrato de José Manuel Romero"
-        />
+        <img src="../../retrato.jpg" alt="Retrato de José Manuel Romero" />
     </span>
 
     <span class="presentation">
@@ -45,7 +42,6 @@ import Contacto from "./Contacto.astro";
         grid-template-areas:
             "img presentation"
             "content content";
-        /*margin: 5em 5em 0 5em;*/
         column-gap: 5em;
     }
 
@@ -58,9 +54,9 @@ import Contacto from "./Contacto.astro";
 
     img {
         border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: 90%;
     }
 
     .location {
@@ -96,7 +92,7 @@ import Contacto from "./Contacto.astro";
             justify-content: center;
         }
 
-        .content{
+        .content {
             margin-top: 0;
         }
     }
