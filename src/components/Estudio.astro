@@ -27,7 +27,7 @@ const { titulo, centro, duracion } = Astro.props;
 
 <div>
     <h3>{titulo}</h3>
-    <h4>{centro}</h4>
+    <p>{centro}</p>
 </div>
 <div>
     <p class="time">{duracion}</p>
@@ -55,5 +55,22 @@ const { titulo, centro, duracion } = Astro.props;
         border: 2px solid #0e0e7e;
         border-radius: 20px;
         padding: 0.5em 1em;
+    }
+
+    @media (max-width: 800px){
+        .grid-container{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 0;
+        }
+
+        .time{
+            margin-top: 1em;
+            width: fit-content;
+        }
+
+        p{
+            margin: 0;
+        };
     }
 </style>

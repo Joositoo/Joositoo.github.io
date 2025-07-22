@@ -35,4 +35,21 @@ const { puesto, empresa, descripcion, tiempo } = Astro.props;
         border-radius: 20px;
         padding: 0.5em 1em;
     }
+
+    @media (max-width: 800px){
+        .grid-container{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 0;
+        }
+
+        .time{
+            margin-top: 1em;
+            width: fit-content;
+        }
+
+        p{
+            margin: 0;
+        };
+    }
 </style>

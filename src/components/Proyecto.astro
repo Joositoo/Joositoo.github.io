@@ -21,8 +21,9 @@ const { titulo, subtitulo, descripcion, ruta, alt } = Astro.props;
     .grid-container{
         display: grid;
         grid-template-columns: 0.3fr 3fr auto;
-
-        padding: 1rem 0;
+        padding: 1rem;
+        padding-left: 0;
+        gap: 1rem
     }
 
     .description{
@@ -31,5 +32,28 @@ const { titulo, subtitulo, descripcion, ruta, alt } = Astro.props;
 
     h3{
         margin-top: 0;
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 800px){
+        .grid-container{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            gap: 1em;
+        }
+
+        .time{
+            margin-top: 1em;
+            width: fit-content;
+        }
+
+        p{
+            margin: 0;
+        };
     }
 </style>
