@@ -28,6 +28,16 @@ const { titulo, subtitulo, descripcion, ruta, alt } = Astro.props;
 
     .description{
         color: #666;
+        transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+    }
+
+    body.dark-mode .description{
+        color:#cbd5e1;
+        transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
     }
 
     h3{

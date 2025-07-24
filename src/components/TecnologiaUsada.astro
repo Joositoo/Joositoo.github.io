@@ -17,5 +17,16 @@ const { nombre } = Astro.props;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
+    }
+
+    body.dark-mode div{
+        background-color: #374151;
+        color: #cbd5e1;
+        transition:
+			background-color 0.3s ease,
+			color 0.3s ease;
     }
 </style>
