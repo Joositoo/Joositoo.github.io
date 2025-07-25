@@ -11,7 +11,7 @@ import Formacion from "../components/Formacion.astro";
 ---
 
 <Layout title="Portfolio - Joositoo">
-	<div>
+	<div class="margin">
 		<Presentacion />
 		<AboutMe />
 
@@ -31,13 +31,13 @@ import Formacion from "../components/Formacion.astro";
 </Layout>
 
 <style>
-	div {
+	.margin {
 		margin: 20px 15%;
 		padding: 20px;
 	}
 
 	@media (max-width: 800px) {
-		div {
+		.margin {
 			margin: 10px 5%;
 			padding: 10px;
 		}
