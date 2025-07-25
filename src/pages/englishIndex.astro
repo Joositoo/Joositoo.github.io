@@ -1,0 +1,45 @@
+---
+import Contacto from "../components/Contacto.astro";
+import Tecnologias from "../components/English/Tecnologias.astro";
+import AboutMe from "../components/English/AboutMe.astro";
+import Line from "../components/Line.astro";
+import Experiencia from "../components/English/Experiencia.astro";
+import Proyectos from "../components/English/Proyectos.astro";
+import Formacion from "../components/English/Formacion.astro";
+import EnglishLayout from "../layouts/EnglishLayout.astro";
+import Presentacion from "../components/English/Presentacion.astro";
+---
+
+<EnglishLayout title="Portfolio - Joositoo">
+	<div>
+		<Presentacion />
+		<AboutMe />
+
+		<Line />
+
+		<Tecnologias />
+		<Experiencia />
+		<Proyectos />
+		<Formacion />
+
+		<Line />
+
+		<Contacto>
+			<p>José Manuel Romero de Lucas</p>
+		</Contacto>
+	</div>
+</Layout>
+
+<style>
+	div {
+		margin: 20px 15%;
+		padding: 20px;
+	}
+
+	@media (max-width: 800px) {
+		div {
+			margin: 10px 5%;
+			padding: 10px;
+		}
+	}
+</style>
