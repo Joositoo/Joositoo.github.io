@@ -6,7 +6,8 @@ import TecnologiaUsada from "./TecnologiaUsada.astro";
 
 <h2>Proyectos</h2>
 
-<Proyecto
+<div>
+    <Proyecto
     titulo="Gestión Académica"
     subtitulo="Aplicación web para profesores"
     descripcion="Aplicación web diseñada para los profesores de una institución académica que lleva el control de todas las asignaturas de un centro educativo."
@@ -206,6 +207,8 @@ import TecnologiaUsada from "./TecnologiaUsada.astro";
         </div>
     </div>
 </Proyecto>
+</div>
+
 
 <style>
     .flex-links {
@@ -232,5 +235,10 @@ import TecnologiaUsada from "./TecnologiaUsada.astro";
 
     h2{
         margin-top: 2em;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
     }
 </style>
