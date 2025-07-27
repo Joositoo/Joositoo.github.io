@@ -12,60 +12,67 @@ const { titulo, subtitulo, descripcion, ruta, alt } = Astro.props;
         <p class="description">{ descripcion }</p>
         <slot name="enlaces" />
     </div>
-    <div>
+    <div class="img">
         <img src={ ruta } alt="Logo del proyecto">
     </div>
 </div>
 
 <style>
-    .grd-container{
-        background-color: antiquewhite;
-        display: grid; 
+    .grd-container {
+        display: grid;
         grid-template-columns: 0.3fr 3fr 1fr;
-        border: 1px solid red;
         padding: 1rem;
         padding-left: 0;
         gap: 1rem
     }
-    
-    .description{
+
+    .description {
         color: #666;
         transition:
-			background-color 0.3s ease,
-			color 0.3s ease;
+            background-color 0.3s ease,
+            color 0.3s ease;
     }
 
-    body.dark-mode .description{
-        color:#cbd5e1;
+    body.dark-mode .description {
+        color: #cbd5e1;
         transition:
-			background-color 0.3s ease,
-			color 0.3s ease;
+            background-color 0.3s ease,
+            color 0.3s ease;
     }
 
-    h3{
+    h3 {
         margin-top: 0;
     }
 
-    img{
-        width: 200px;
-        height: 200px;
+    img {
+        width: 190px;
+        height: 190px;
         border-radius: 10px;
     }
 
-    /*@media (max-width: 800px){
-        .grd-container{
+    .img {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 800px) {
+        .grd-container {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto;
             gap: 1em;
         }
 
-        .time{
+        .time {
             margin-top: 1em;
             width: fit-content;
         }
 
-        p{
+        .img {
+            justify-content: start;
+        }
+
+        p {
             margin: 0;
         }
-    }*/
+    }
 </style>
