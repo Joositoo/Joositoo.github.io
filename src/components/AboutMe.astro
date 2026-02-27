@@ -1,34 +1,30 @@
 ---
-
+ const personalImageAlt = "José Manuel Romero"
 ---
 
-<h2 class="text">Sobre mí</h2>
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo José Manuel pero mis amigos me llaman José. Empecé en la
+      programación en 2023 a través del grado superior de desarrollo de aplicaciones web. Actualmente estoy <strong
+        >realizando proyectos personales y estudiando en el campus 42 de Telefónica</strong
+      >.
+    </p>
 
-<p>
-    Soy José Manuel Romero, un joven apasionado por la informática y la
-    programación.
-</p>
+    <p>
+      Algunos de mis éxitos incluyen <strong
+        >la creación de sistemas para La fábrica de Software que mejoraron la economía de la empresa y la comodidad de los clientes de la misma.</strong>
+    </p>
 
-<p>
-    Técnico Superior en desarrollo de Aplicaciones Web, el haber compaginado mis
-    estudios con trabajos como operario logístico y repartidor me han convertido
-    en la persona ambiciosa, comprometida y luchadora que soy hoy en día.
-</p>
+    <p>
+      Como estudiante, <strong
+        > y especialmente en 42. He ayudado a mis compañeros a aprender sobre C, Unix y programación en general. Me encanta compartir mi conocimiento y ayudar a los demás siempre que puedo</strong
+      >.
+    </p>
+  </div>
 
-<p>
-    Tras probar en el sector de la Tecnología como desarrollador en La Fábrica
-    de Software, me he dado cuenta de dónde quiero desarrollar mi carrera
-    profesional.
-</p>
+  <img width="200" height="200" src="/retrato.jpg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
 
-<p>
-    Actualmente trabajo en La Fábrica de Software y cada día me siento más
-    afortunado de poder dedicarme a lo que me apasiona y disfrutar cada día.
-</p>
-
-
-<style>
-    h2{
-        margin-top: 1.5em;
-    }
-</style>
+</article>

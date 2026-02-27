@@ -1,0 +1,150 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Vue from "./icons/Vue.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
+import JavaScript from "./icons/Javascript.astro"
+import C from "./icons/C.astro"
+import MySQL from "./icons/MySQL.astro"
+import React from "./icons/React.astro"
+import SpringBoot from "./icons/Springboot.astro"
+import CSS from "./icons/CSS.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-[#42b883] text-white",
+    icon: Vue,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#264de4] text-white",
+    icon: CSS,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#7952b3] text-white",
+    icon: Bootstrap,
+  },
+  SPRINGBOOT: {
+    name: "Spring Boot",
+    class: "bg-[#6db33f] text-white",
+    icon: SpringBoot,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f] text-white",
+    icon: MySQL,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#3cbcd6] text-white",
+    icon: React,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#d4b800] text-white",
+    icon: JavaScript,
+  },
+  C: {
+    name: "C",
+    class: "bg-[#00599c] text-white",
+    icon: C,
+  },
+}
+const PROJECTS = [
+  {
+    title: "Gestión Académica",
+    description:
+      "Aplicación web diseñada para los profesores de una institución académica que lleva el control de todas las asignaturas de un centro educativo.",
+    link1: "https://github.com/Joositoo/Gestion-Academica-FRONT",
+    link2: "https://github.com/Joositoo/Gestion-Academica-Back",
+    image: "/projects/GestionAcademica.png",
+    tags: [TAGS.VUE, TAGS.SPRINGBOOT, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.MYSQL],
+  },
+  {
+    title: "Museo Virtual",
+    description:
+      "Aplicación web que recorre tres de los mejores museos del mundo con el objetivo de mostrar las obras que albergan y permitir al usuario explorarlas de forma interactiva.",
+    link1: "https://github.com/Joositoo/Proyecto-Museo-Virtual",
+    image: "/projects/MuseoVirtual.png",
+    tags: [TAGS.REACT, TAGS.CSS, TAGS.BOOTSTRAP],
+  },
+    {
+    title: "AdventJS 24",
+    description:
+      "Retos diarios de programación para mejorar la lógica y la resolución de problemas.",
+    link1: "https://github.com/Joositoo/AdventJS-2024",
+    image: "/projects/Adventjs.png",
+    tags: [TAGS.JAVASCRIPT],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link1, link2}) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 whitespace-nowrap`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {link1 && (
+            <LinkButton href={link1}>
+              <GitHub class="size-6" />
+              {title === "Gestión Académica" ? "Front" : "Code"}
+              
+            </LinkButton>
+          )}
+          {link2 && (
+            <LinkButton href={link2}>
+              <GitHub class="size-6" />
+              {title === "Gestión Académica" ? "Back" : "Code"}
+
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+
+

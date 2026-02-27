@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Marzo 2025 - Marzo 2026",
+    title: "Desarrollador",
+    company: "La Fábrica de Software",
+    description:
+      "Implementación de nuevas funcionalidades y mantenimineto de las ya existentes tanto de las distintas webs como de las máquinas dispensadoras y recolectoras de ropa. Encargado de la creación de un sistema que llevase el inventario de todas las piezas que se compran, usan, pierden, rompen... Mejorando la economía de la empresa un 20% y el desarrollo de otro sistema que llevase todo lo relacionado con las facturas electrónicas."
+  },
+  {
+    date: "Mayo 2023 - Actualidad",
+    title: "Operario logístico",
+    company: "HEFAME",
+    description:
+      "Apoyo en la preparación de pedidos para su distribución a las distintas entidades farmacéuticas y colocación de mercancías enviadas adaptado a la sección de trabajo: entradas, salidas, robot, dinámicas.",
+  },
+    {
+    date: "Junio 2023 - Abril 2024",
+    title: "Repartidor y ayudante de cocina",
+    company: "Papa Johns",
+    description:
+      "Reparto de pedidos a domicilio y apoyo tanto en la caja como en la cocina con tareas como la preparación de pedidos de manera presencial y telefónica, preparación de ingredientes, elaboración de pizzas, limpieza y organización del espacio de trabajo.",
+  },
+    {
+    date: "Junio 2019 - Septiembre 2019",
+    title: "Socorrista",
+    company: "Aguas Cristalinas Madrileñas S.L.",
+    description:
+      "Vigilancia de la piscina, prevención de accidentes, primeros auxilios, mantenimiento de la piscina y el espacio que rodea a la piscina.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
